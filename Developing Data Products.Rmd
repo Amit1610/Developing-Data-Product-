@@ -1,0 +1,28 @@
+---
+title: 'Peer-graded Assignment: R Markdown and Leaflet'
+author: "Amit Kumar"
+date: "June 26, 2017"
+output:
+  html_document: default
+  pdf_document: default
+css: style.css
+---
+
+# Overview: 
+
+The objective of assignment is to create a web page using R Markdown that features a map created with Leaflet.
+
+This webpage is to be hosted on either GitHub Pages, RPubs, or NeoCities.
+
+This webpage contains the date that I have created the document, and it also contains a map created with Leaflet. 
+
+```{r}
+library(leaflet)
+```
+
+```{r}
+my_map <- leaflet() %>% addTiles() 
+my_map <- my_map %>% addMarkers(lat=28.4376538, lng= 77.2923329,16, popup="My Home - Navshakti Apartment")
+my_map
+```
+
